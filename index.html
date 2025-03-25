@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NIK Parser</title>
+  <title>NIK Decoder</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -57,7 +57,7 @@
 </head>
 <body>
   <div class="container">
-    <h2>NIK Parser</h2>
+    <h2>NIK Decoder</h2>
     <form id="nikForm">
       <label for="nik">Masukkan NIK (satu per baris):</label>
       <textarea id="nik" name="nik" placeholder="Contoh:
@@ -110,7 +110,7 @@
       };
     }
 
-    // Fungsi utama untuk parsing NIK
+    // Fungsi utama untuk Decode NIK
     function parseNIK(nik) {
       nik = nik.trim();
       if (nik.length < 16) {
@@ -154,7 +154,7 @@
         return;
       }
 
-      // Parsing setiap NIK dan tampilkan hasilnya
+      // Decode setiap NIK dan tampilkan hasilnya
       nikList.forEach(nik => {
         const parsed = parseNIK(nik);
         const div = document.createElement("div");
